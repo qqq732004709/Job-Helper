@@ -1,6 +1,6 @@
 ﻿namespace Job_Helper;
 
-partial class Form1
+partial class MainForm
 {
     /// <summary>
     ///  Required designer variable.
@@ -65,7 +65,6 @@ partial class Form1
         FilePath.Name = "FilePath";
         FilePath.Size = new Size(0, 17);
         FilePath.TabIndex = 1;
-        FilePath.Click += FilePath_Click;
         // 
         // SaveKey
         // 
@@ -107,6 +106,7 @@ partial class Form1
         JobDescription.Location = new Point(122, 98);
         JobDescription.Multiline = true;
         JobDescription.Name = "JobDescription";
+        JobDescription.ScrollBars = ScrollBars.Horizontal;
         JobDescription.Size = new Size(172, 54);
         JobDescription.TabIndex = 4;
         // 
@@ -124,6 +124,7 @@ partial class Form1
         AiResume.Location = new Point(122, 198);
         AiResume.Multiline = true;
         AiResume.Name = "AiResume";
+        AiResume.ScrollBars = ScrollBars.Horizontal;
         AiResume.Size = new Size(172, 193);
         AiResume.TabIndex = 5;
         // 
@@ -154,8 +155,9 @@ partial class Form1
         CopyResume.TabIndex = 0;
         CopyResume.Text = "复制内容";
         CopyResume.UseVisualStyleBackColor = true;
+        CopyResume.Click += CopyResume_Click;
         // 
-        // Form1
+        // MainForm
         // 
         AutoScaleDimensions = new SizeF(7F, 17F);
         AutoScaleMode = AutoScaleMode.Font;
@@ -172,7 +174,7 @@ partial class Form1
         Controls.Add(CopyResume);
         Controls.Add(FetchResume);
         Controls.Add(SelectFile);
-        Name = "Form1";
+        Name = "MainForm";
         Text = "工作助手";
         ResumeLayout(false);
         PerformLayout();
